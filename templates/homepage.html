@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Info made by Sindia</title>
+</head>
+<body>
+
+<h1>This is the homepage of Project traker/Flask!</h1>
+
+<h2>Students: </h2>
+
+<ul>
+
+{% for info in all_students %}
+    <li>Name: {{ info.first_name }} {{ info.last_name }} 
+        Github: <a href="/student?github={{ info[3] }}">{{ info.github }}</a>
+    </li><br>
+{% endfor %}
+
+</ul>
+
+<h2>Projects: </h2>
+<ul>
+{% for item in projects %}
+<li>
+    Project Title: <a href="/project?title={{ item.title }}">{{ item.title }}</a>
+    Description: {{ item.description }}
+    Maximum grade: {{ item.max_grade }}
+
+</li><br>
+
+{% endfor %}
+</ul>
+</body>
+</html>

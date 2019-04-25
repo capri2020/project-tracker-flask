@@ -1,0 +1,25 @@
+<!doctype html>
+<html>
+<head>
+    <title>Student Info made by Sindia</title>
+</head>
+<body>
+  <h1>{{ first }} {{ last }}</h1>
+
+  <p>GitHub Account: {{ github }}</p>
+
+  <h2>Grades:</h2>
+
+  <ul>
+
+    {% for item in title, grade %}
+
+  <li><a href="/project?title={{ item.project_title }}">
+  {{ item.project_title }}</a> --- {{ item.grade }}</li>
+
+
+    {% endfor %}
+
+</ul>
+</body>
+</html>
